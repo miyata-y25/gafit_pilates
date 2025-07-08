@@ -340,7 +340,7 @@ body {
 
 .point-area {
     background: url(../img/top/point_bg_sp.png) no-repeat;
-    background-position: center;
+    background-position: bottom center;
     background-size: cover;
     padding: (10400vw/375) 20px (5700vw/375);
     text-align: center;
@@ -350,7 +350,7 @@ body {
         padding: 10em 20px (5700vw/375);
     }
     img {
-        max-width: 800px;
+        max-width: 700px;
         width: 90%;
         @include max-screen($screen-xs) {
             width: 100%;
@@ -401,7 +401,7 @@ body {
     }
     figure {
         position: relative;
-        max-width: 800px;
+        max-width: 700px;
         width: percentage(350/375);
         margin: 0 auto;
     }

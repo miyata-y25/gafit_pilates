@@ -577,34 +577,16 @@ sup {
     font-size: clamp((12em/16), 1vw , (16em/16));
     position: fixed;
     z-index: 100;
-    bottom: 0;
-    right: 0%;
-    display: flex;
-    width: 40em;
+    bottom: 1em;
+    right: 1em;
+    width: 50%;
+    max-width: 300px;
     @include max-screen($screen-xs) {
-        width: 100%;
+        max-width: 200px;
+        bottom: 0.5em;
+        right: 0.5em;
     }
     li {
-        width: 50%;
-        a {
-            display: block;
-            text-align: center;
-            padding: 1.5em 0;
-            line-height: 0;
-            img {
-                height: (30em/16);
-                width: auto;
-                @include max-screen($screen-xs) {
-                    height: (27em/16);
-                }
-            }
-            &.web {
-                background: #1f4492;
-            }
-            &.mypage {
-                background: #00b900;
-            }
-        }
     }
 }
 

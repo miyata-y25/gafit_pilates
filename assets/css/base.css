@@ -871,44 +871,18 @@ sup {
   font-size: clamp(0.75em, 1vw, 1em);
   position: fixed;
   z-index: 100;
-  bottom: 0;
-  right: 0%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 40em;
+  bottom: 1em;
+  right: 1em;
+  width: 50%;
+  max-width: 300px;
 }
 @media screen and (max-width: 640px) {
   .fixed-btn {
-    width: 100%;
+    max-width: 200px;
+    bottom: 0.5em;
+    right: 0.5em;
   }
 }
-.fixed-btn li {
-  width: 50%;
-}
-.fixed-btn li a {
-  display: block;
-  text-align: center;
-  padding: 1.5em 0;
-  line-height: 0;
-}
-.fixed-btn li a img {
-  height: 1.875em;
-  width: auto;
-}
-@media screen and (max-width: 640px) {
-  .fixed-btn li a img {
-    height: 1.6875em;
-  }
-}
-.fixed-btn li a.web {
-  background: #1f4492;
-}
-.fixed-btn li a.mypage {
-  background: #00b900;
-}
-
 /*==================================================================================================
     footer
 ==================================================================================================*/

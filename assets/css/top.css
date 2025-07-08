@@ -335,7 +335,7 @@
 
 .point-area {
   background: url(../img/top/point_bg_sp.png) no-repeat;
-  background-position: center;
+  background-position: bottom center;
   background-size: cover;
   padding: 27.7333333333vw 20px 15.2vw;
   text-align: center;
@@ -348,7 +348,7 @@
   }
 }
 .point-area img {
-  max-width: 800px;
+  max-width: 700px;
   width: 90%;
 }
 @media screen and (max-width: 640px) {
@@ -411,7 +411,7 @@
 }
 .check-area figure {
   position: relative;
-  max-width: 800px;
+  max-width: 700px;
   width: 93.3333333333%;
   margin: 0 auto;
 }
