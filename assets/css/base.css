@@ -873,16 +873,36 @@ sup {
   z-index: 100;
   bottom: 1em;
   right: 1em;
-  width: 50%;
-  max-width: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (max-width: 640px) {
   .fixed-btn {
-    max-width: 200px;
     bottom: 0.5em;
     right: 0.5em;
+    left: 0.5em;
   }
 }
+.fixed-btn li {
+  width: 49%;
+  max-width: 280px;
+}
+@media screen and (max-width: 640px) {
+  .fixed-btn li {
+    max-width: none;
+  }
+}
+
 /*==================================================================================================
     footer
 ==================================================================================================*/

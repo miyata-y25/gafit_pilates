@@ -579,14 +579,20 @@ sup {
     z-index: 100;
     bottom: 1em;
     right: 1em;
-    width: 50%;
-    max-width: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     @include max-screen($screen-xs) {
-        max-width: 200px;
         bottom: 0.5em;
         right: 0.5em;
+        left: 0.5em;
     }
     li {
+        width: 49%;
+        max-width: 280px;
+        @include max-screen($screen-xs) {
+            max-width: none;
+        }
     }
 }
 

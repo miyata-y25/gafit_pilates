@@ -707,22 +707,71 @@ body {
 }
 
 .price-ul {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    // text-align: center;
+    // max-width: 800px;
+    // margin: 0 auto;
+    // display: flex;
+    // justify-content: space-between;
+    padding-bottom: 2.5em;
+    max-width: 1400px;
+    margin: 0 auto 3em;
+    -ms-overflow-style: none;/* IE, Edge 対応 */
+    scrollbar-width: none;/* Firefox 対応 */
+    &::-webkit-scrollbar {
+        display: none;/* Chrome, Safari 対応 */
+    }
+    .simplebar-scrollbar::before {
+        background: #ffffff;
+        border-radius: 50em;
+        height: 1em !important;
+        margin-left: 0;
+        margin-top: 0;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .simplebar-track {
+        background: $ora;
+        border-radius: 50em;
+        height: 1em !important;
+    }
+    @include min-screen($screen-md + 1) {
+        flex-wrap: wrap;
+    }
+    .simplebar-content {
+        display: flex;
+        @include min-screen($screen-md + 1) {
+            flex-wrap: wrap;
+        }
+    }
     li {
         background: #FFF;
         border-radius: 1em;
         box-shadow: 0 0 (5em/16) 0 rgba(0,0,0,0.1);
-        width: 48%;
+        text-align: center;
+        flex-shrink: 0;
         overflow: hidden;
+        @include min-screen($screen-md + 1) {
+            width: 23%;
+            margin: 2% 1% 0;
+        }
+        @include max-screen($screen-md) {
+            width: 42%;
+            margin-right: 3%;
+        }
+        @include max-screen(480px) {
+            width: 80%;
+            margin-right: 5%;
+        }
         h3 {
             background: #f2f2f2;
             font-size: (18em/12);
-            padding: 1em;
             line-height: (24/18);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 4.5em;
         }
         p {
             font-size: (16em/12);

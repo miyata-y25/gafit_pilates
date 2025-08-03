@@ -43,19 +43,19 @@
   content: "";
   position: absolute;
   bottom: 0;
-  right: calc(50% + 0.0416666667em - 0.25em);
-  width: 1em;
+  right: calc(50% + 0.3333333333em);
+  width: 0.3333333333em;
   height: 0.0833333333em;
-  background: #B7D100;
+  background: #000;
 }
 .sec__ttl__en::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: calc(50% + 0.0416666667em + 0.25em);
-  width: 0.5em;
+  left: calc(50% - 0.3333333333em);
+  width: 1em;
   height: 0.0833333333em;
-  background: #000;
+  background: #ff9c00;
 }
 .sec__ttl__jp {
   display: block;
@@ -69,17 +69,17 @@
   font-size: 1.25em;
 }
 .news-list li {
-  border-bottom: 2px solid #B7D100;
+  border-bottom: 2px solid #ff9c00;
   padding: 0 0 0.75em;
   margin-bottom: 0.75em;
 }
 .news-list li time {
-  color: #B7D100;
+  color: #ff9c00;
   font-weight: bold;
   display: block;
 }
 .news-list li a:hover {
-  color: #B7D100;
+  color: #ff9c00;
 }
 
 .single-area,
@@ -102,7 +102,7 @@
 }
 .single-area a,
 .page-area a {
-  color: #B7D100;
+  color: #ff9c00;
   text-decoration: underline;
 }
 .single-area a:hover,
@@ -144,20 +144,20 @@
 .page-area h2 {
   font-size: 1.5em;
   background: #f2f2f2;
-  border-left: 0.25em solid #B7D100;
+  border-left: 0.25em solid #ff9c00;
   padding: 0.75em 0.5em;
 }
 .single-area h3,
 .page-area h3 {
   font-size: 1.25em;
-  background: #B7D100;
+  background: #ff9c00;
   color: #FFF;
   padding: 0.5em 0.75em;
 }
 .single-area h4,
 .page-area h4 {
   font-size: 1.25em;
-  border-bottom: 2px solid #B7D100;
+  border-bottom: 2px solid #ff9c00;
   padding: 0.5em 0;
 }
 .single-area h5,
