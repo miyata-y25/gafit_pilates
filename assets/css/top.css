@@ -158,12 +158,25 @@
 .sec.--flow {
   background: #E6E6E6;
 }
-@media screen and (min-width: 769px) {
-  .mv-cont {
-    max-width: 1080px;
-    width: 57.4468085106%;
-    margin: 0 auto;
+.mv-cont {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.mv-cont__iframe {
+  position: relative;
+  padding-top: 56.25%;
+}
+@media screen and (max-width: 640px) {
+  .mv-cont__iframe {
+    width: 100%;
   }
+}
+.mv-cont__iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-width: 769px) {
@@ -544,13 +557,22 @@
 @media screen and (min-width: 769px) {
   .staff-list {
     margin: 0 auto;
-    max-width: 840px;
+    max-width: 1440px;
+    width: 80%;
   }
 }
 .staff-list .slick-arrow {
   display: none !important;
 }
+.staff-list .slick-track {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
 .staff-list__li {
+  float: none !important;
+  height: auto !important;
   background: #FFF;
   padding: 2em 2em;
   border-radius: 1em;
@@ -562,6 +584,9 @@
 .staff-list__li figure {
   width: 10em;
   margin: 0 auto 1em;
+}
+.staff-list__li figure img {
+  height: auto;
 }
 .staff-list__li .info {
   text-align: center;
@@ -598,6 +623,11 @@
   font-size: 1.375em;
   margin-top: 1.5em;
   font-weight: 500;
+}
+@media screen and (min-width: 769px) {
+  .staff-list__li .read {
+    font-size: 1em;
+  }
 }
 
 .slick-dots {
@@ -925,7 +955,7 @@
   border: 1px solid #ff9c00;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .faq-list:not(:last-child) {
@@ -986,6 +1016,7 @@
   margin-top: 0;
   position: relative;
   font-weight: 500;
+  white-space: pre-wrap;
 }
 @media screen and (max-width: 640px) {
   .faq-list__body {

@@ -171,20 +171,22 @@ body {
 }
 
 .mv-cont {
-    @include min-screen($screen-sm + 1) {
-        max-width: 1080px;
-        width: percentage(1080/1880);
-        margin: 0 auto;
+    max-width: 960px;
+    margin: 0 auto;
+    &__iframe {
+        position: relative;
+        padding-top: percentage(9/16);
+        @include max-screen($screen-xs) {
+            width: 100%;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
-    // padding-top: percentage(9/16);
-    // position: relative;
-    // img,iframe {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    // }
 }
 
 .intro-cont {
@@ -517,12 +519,18 @@ body {
     margin: 0 -20px;
     @include min-screen($screen-sm + 1) {
         margin: 0 auto;
-        max-width: 840px;
+        max-width: 1440px;
+        width: 80%;
     }
     .slick-arrow {
         display: none !important;
     }
+    .slick-track {
+        display: flex;
+    }
     &__li {
+        float: none !important;
+        height: auto !important;
         background: #FFF;
         padding: 2em 2em;
         border-radius: 1em;
@@ -532,6 +540,9 @@ body {
         figure {
             width: 10em;
             margin: 0 auto 1em;
+            img {
+                height: auto;
+            }
         }
         .info {
             text-align: center;
@@ -568,6 +579,9 @@ body {
             font-size: (22em/16);
             margin-top: 1.5em;
             font-weight: 500;
+            @include min-screen($screen-sm + 1) {
+                font-size: (16em/16);
+            }
         }
     }
 }
@@ -854,8 +868,10 @@ body {
 .faq-list {
     border: 1px solid $ora;
     transition: .3s;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
+    @include min-screen($screen-md + 1) {
+    }
     &:not(:last-child) {
         margin-bottom: 3em;
         @include max-screen($screen-xs) {
@@ -911,6 +927,7 @@ body {
         margin-top: 0;
         position: relative;
         font-weight: 500;
+        white-space: pre-wrap;
         @include max-screen($screen-xs) {
             padding-left: (30em/18);
             padding-right: (30em/18);
